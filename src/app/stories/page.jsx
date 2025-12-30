@@ -53,14 +53,14 @@ const story = () => {
     ];
 
     return (
+      <div>
+        <Title>Explore Storys of Developers</Title>
         <div>
-            <Title>Explore Storys of Developers</Title>
-            <div>
-                {
-                    devStorys.map(story => <StoryCard key={story.id} story={story}></StoryCard>)
-                }
-            </div>
+          {devStorys.map((member) => (
+            <StoryCard key={member.id} member={member}></StoryCard>
+          ))}
         </div>
+      </div>
     );
 };
 

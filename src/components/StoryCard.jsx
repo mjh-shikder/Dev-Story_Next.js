@@ -1,9 +1,9 @@
+import Link from 'next/link';
 import React from 'react';
 
-const StoryCard = ({ story }) => {
-    
-     const { name, designation, company, experience, skills, story, image } = story
-      
+const StoryCard = ({ member }) => {
+  let { name, designation, company, experience, skills, story, image } = member;
+
   return (
     <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
       {/* Image */}
@@ -40,7 +40,7 @@ const StoryCard = ({ story }) => {
 
         {/* Actions */}
         <div className="card-actions justify-end mt-4">
-          <button className="btn btn-sm btn-primary">Read Full Story</button>
+          <Link href={`/stories/${member.id}`} className="btn btn-sm btn-primary">Read Full Story</Link>
         </div>
       </div>
     </div>
