@@ -4,7 +4,7 @@ const TutorialPage = async ({ params }) => {
 //   const { technology, topic, page_no, subject } = await params;
 //   console.log({ technology, topic, page_no, subject });
     const { slug } = await params;
-    const [technology, topic, , page_no, subject] = slug
+    const [technology, topic, , page_no, subject] = slug || []
     console.log('Log SLUG:::',slug)
     
 
