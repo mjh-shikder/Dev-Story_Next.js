@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
+import NavLink from './NavLink';
 
 const Header = () => {
 
@@ -17,12 +18,11 @@ if(pathname.startsWith('/dashboard')) return <></>
             ☺️ Dev-Story
           </Link>
           <nav className="space-x-3.5">
-            <Link href="/about">About</Link>
-            <Link href="/stories">Storys</Link>
-            <Link href="/about/teams">teams</Link>
-            <Link href="/login">Login</Link>
-            <Link href="/register">Register</Link>
-            <Link href="/tutorials">Tutorials</Link>
+            <NavLink href="/about">About</NavLink>
+            <NavLink href="/stories">Storys</NavLink>
+            <NavLink href="/login">Login</NavLink>
+            <NavLink href="/register">Register</NavLink>
+            <NavLink href="/tutorials">Tutorials</NavLink>
           </nav>
         </header>
       </div>
